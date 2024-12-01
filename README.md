@@ -8,10 +8,10 @@ The website is a versatile online gaming keyboard shop tailored to deliver an ex
 
 User Audience, Intent, and Purpose
 Audience:
-Shoppers looking for a seamless and responsive online shopping experience.
-Individuals of all age groups who are familiar with e-commerce platforms.
+Shoppers looking for a seamless and responsive online shopping experience for gaming keyboard.
+Individuals of all age groups especially young poeople who are familiar with gaming keyboards.
 Intent and Purpose:
-The website's purpose is to provide a user-friendly and intuitive platform for browsing and purchasing products.
+The website's purpose is to provide a user-friendly and intuitive platform for browsing and purchasing gaming keyboard.
 It emphasizes ease of use with an elegant design, ensuring users can navigate effortlessly and make purchases conveniently.
 Who the Website is Catering For?
 Primary Audience:
@@ -46,7 +46,7 @@ Google Maps Embed API:
 
 Embedded map for displaying the shop’s location.
 Link: Google Maps Embed API
-FontAwesome Icons:
+FontAwesome Icons
 
 Used for cart and navigation icons.
 Link: FontAwesome
@@ -69,7 +69,7 @@ Real-time cart updates and total price calculations.
 Contact Section:
 Google Maps embed for location identification.
 Research Done:
-User Experience (UX):
+User Experience (UX)
 
 Studied UX principles for e-commerce websites to ensure intuitive navigation and engaging layouts.
 Focused on key design trends for mobile-first responsive design.
