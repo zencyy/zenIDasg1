@@ -1,5 +1,4 @@
 # zenIDasg1
-gaming keyboard company website
 My E-Commerce Website
 This project is a fully responsive e-commerce website designed to provide users with an interactive shopping experience. It features a dynamic cart system, a carousel for showcasing featured items, and seamless navigation across different sections of the site.
 
