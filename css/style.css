@@ -72,6 +72,235 @@ body {
     right: -10px;
 }
 
+/* Home video carousell section */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 700px; /* Adjust height as needed */
+    overflow: hidden;
+  }
+  
+  .carousel-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6); /* Subtle background to improve text readability */
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Softer shadow for depth */
+    animation: fadeIn 1s ease-in-out; /* Smooth fade-in animation */
+    max-width: 80%; /* Ensures responsiveness */
+  }
+  
+  .carousel-caption h1.brand-name {
+    font-size: 50px; /* Professional large title */
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-family: "Roboto", sans-serif; /* Clean modern font */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Subtle text shadow */
+  }
+  
+  .carousel-caption p.brand-description {
+    font-size: 20px; /* Subheading size */
+    font-weight: 400;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .carousel-caption .cta-button {
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: rgb(51, 51, 51); /* Bright and modern call-to-action color */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .carousel-caption .cta-button:hover {
+    background-color: #757575;
+    transform: scale(1.05); /* Slight scaling for hover effect */
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+  }
+
+  /* Info section */
+.info-section {
+    display: flex;
+    flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+    justify-content: center; /* Centers the content */
+    align-items: flex-start;
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 1400px;
+    gap: 20px; /* Consistent gap between columns */
+  }
+  
+  .info-column {
+    text-align: center;
+    flex: 1 1 300px; /* Flex-grow, flex-shrink, and base width */
+    max-width: 350px; /* Prevent columns from stretching too wide */
+    min-width: 300px; /* Ensure columns have a minimum width */
+    margin: 0 auto; /* Center columns on smaller screens */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .info-image {
+    width: 100%; /* Ensures responsiveness */
+    height: 200px; /* Fixed height to ensure uniformity */
+    object-fit: cover; /* Ensures proper scaling and prevents stretching */
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Add depth */
+  }
+  
+  .info-column h3 {
+    font-size: 22px; /* Adjust font size for smaller screens */
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  .info-column p {
+    font-size: 16px; /* Reduce font size for readability */
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6; /* Adjust line height */
+  }
+  
+  .cta-button {
+    padding: 10px 16px; /* Adjust padding for smaller buttons */
+    font-size: 14px;
+    color: #fff;
+    background-color: rgb(51, 51, 51);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #757575;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .info-section {
+      flex-direction: column; /* Stack columns vertically */
+      align-items: center; /* Center-align the stacked content */
+      gap: 30px; /* Add more spacing between items */
+    }
+  
+    .info-column {
+      flex: 1 1 300px; /* Columns maintain a base size */
+      max-width: 350px; /* Ensure columns do not expand too much */
+      min-width: 300px; /* Maintain a minimum width */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .info-column h3 {
+      font-size: 20px; /* Smaller font size for headers */
+    }
+  
+    .info-column p {
+      font-size: 14px; /* Smaller font size for text */
+    }
+  
+    .cta-button {
+      font-size: 12px; /* Adjust button text size */
+      padding: 8px 14px; /* Adjust button padding */
+    }
+  }
+
+/* testimonial section */
+.testimonial-section {
+    text-align: center;
+    margin: 50px auto;
+    padding: 40px 20px;
+    background-color: #fdfdfd;
+    border-top: 2px solid rgb(51, 51, 51);
+    border-bottom: 2px solid rgb(51, 51, 51);
+  }
+  
+  .testimonial-section h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  
+  .testimonial-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .testimonial {
+    flex: 1;
+    max-width: 500px;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+  }
+  
+  .testimonial-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid rgb(51, 51, 51);
+  }
+  
+  .testimonial h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .testimonial p {
+    font-size: 16px;
+    color: #555;
+    font-style: italic;
+    line-height: 1.5;
+  }
+
 /* Shop header/banner section*/
 .shop-header {
     position: relative;
@@ -150,4 +379,5 @@ body {
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
   }
 
-  
+
+
