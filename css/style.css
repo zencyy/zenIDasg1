@@ -1,10 +1,12 @@
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
   }
-
-.navbar{
+  
+  /* Navbar Section */
+  .navbar {
     display: flex;
     justify-content: space-between; /* Ensure spacing between left and right content */
     align-items: center;
@@ -13,51 +15,50 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-}
-
-.navbar-left {
+  }
+  
+  .navbar-left {
     display: flex;
     align-items: center;
     gap: 30px; /* Add spacing between logo and navigation links */
-}
-
-
-.navbar .brand img {
+  }
+  
+  .navbar .brand img {
     width: 80px;
     border-radius: 50%;
-}
-
-.navbar ul {
+  }
+  
+  .navbar ul {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
-}
-
-.navbar ul li {
-    margin-right: 20px;
-}
+  }
   
-.navbar ul li a {
+  .navbar ul li {
+    margin-right: 20px;
+  }
+  
+  .navbar ul li a {
     text-decoration: none;
     color: #fff;
     font-size: 16px;
     transition: color 0.3s ease;
-}
+  }
   
-.navbar ul li a:hover {
+  .navbar ul li a:hover {
     color: #4f4f4f;
-}
+  }
   
-/* Cart Icon */
-.navbar .cart {
+  /* Cart Icon */
+  .navbar .cart {
     display: flex;
     align-items: center;
     color: #fff;
     position: relative;
-}
+  }
   
-.navbar .cart .cartAmount {
+  .navbar .cart .cartAmount {
     background-color: #4f4f4f;
     color: #fff;
     border-radius: 50%;
@@ -70,86 +71,74 @@ body {
     position: absolute;
     top: -5px;
     right: -10px;
-}
-
-/* Home video carousell section */
-.carousel {
+  }
+  
+  /* Cart Additional Styling */
+  .cart {
     position: relative;
-    width: 100%;
-    height: 700px; /* Adjust height as needed */
-    overflow: hidden;
+    background-color: rgb(51, 51, 51);
+    color: #212529;
+    font-size: 30px;
+    padding: 5px;
+    border-radius: 4px;
   }
   
-  .carousel-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .cart:hover {
+    background-color: rgba(209, 209, 209, 0.781);
   }
   
-  .carousel-caption {
+  .cartAmount {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    background: rgba(0, 0, 0, 0.6); /* Subtle background to improve text readability */
-    padding: 30px 40px;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Softer shadow for depth */
-    animation: fadeIn 1s ease-in-out; /* Smooth fade-in animation */
-    max-width: 80%; /* Ensures responsiveness */
+    top: -10px;
+    right: -10px;
+    font-size: 16px;
+    background-color: red;
+    color: white;
+    padding: 3px;
+    border-radius: 3px;
   }
   
-  .carousel-caption h1.brand-name {
-    font-size: 50px; /* Professional large title */
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 15px;
-    font-family: "Roboto", sans-serif; /* Clean modern font */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Subtle text shadow */
-  }
-  
-  .carousel-caption p.brand-description {
-    font-size: 20px; /* Subheading size */
-    font-weight: 400;
-    color: #e0e0e0;
-    margin-bottom: 20px;
-    line-height: 1.6;
-    font-family: "Roboto", sans-serif;
-  }
-  
-  .carousel-caption .cta-button {
-    padding: 12px 25px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #ffffff;
-    background-color: rgb(51, 51, 51); /* Bright and modern call-to-action color */
-    border: none;
-    border-radius: 8px;
+  /* Hamburger Menu */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
-    font-family: "Roboto", sans-serif;
   }
   
-  .carousel-caption .cta-button:hover {
-    background-color: #757575;
-    transform: scale(1.05); /* Slight scaling for hover effect */
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: 0.3s;
   }
   
-  /* Fade-in Animation */
-  @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translate(-50%, -60%);
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar ul {
+      display: none; /* Hide navigation links by default */
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: rgb(51, 51, 51);
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
-    to {
-        opacity: 1;
-        transform: translate(-50%, -50%);
+  
+    .navbar ul.show {
+      display: flex; /* Show navigation links when toggled */
+    }
+  
+    .hamburger {
+      display: flex; /* Display hamburger menu on small screens */
     }
   }
-
+  
   /* Info section */
-.info-section {
+  .info-section {
     display: flex;
     flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
     justify-content: center; /* Centers the content */
@@ -240,9 +229,10 @@ body {
       padding: 8px 14px; /* Adjust button padding */
     }
   }
-
-/* testimonial section */
-.testimonial-section {
+  
+  
+  /* testimonial section */
+  .testimonial-section {
     text-align: center;
     margin: 50px auto;
     padding: 40px 20px;
@@ -300,90 +290,12 @@ body {
     font-style: italic;
     line-height: 1.5;
   }
-
-/* Shop header/banner section*/
-.shop-header {
-    position: relative;
-    width: 100%;
-    height: 400px; /* Set height of carousel */
-    overflow: hidden;
-  }
   
-  .carousell {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
+  /**
+   * ! Shop items styles are here
+   **/
   
-  .carousell-images {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .carousell-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures image is properly scaled */
-  }
-  
-  
-  .prev-button {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    font-size: 30px;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transform: translateY(-50%);
-    opacity: 0.6;
-  }
-  
-  .prev-button:hover {
-    opacity: 1;
-  }
-  
-  /* Styles for the next-button */
-  .next-button {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    font-size: 30px;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transform: translateY(-50%);
-    opacity: 0.6;
-  }
-  
-  .next-button:hover {
-    opacity: 1;
-  }
-  
-  /* Add styles for shop header text */
-  .shop-header-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    font-size: 2rem;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
-  }
-
-/**
- * ! Shop items styles are here
- **/
-
- .shop {
+   .shop {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
@@ -468,10 +380,524 @@ body {
   .add-to-cart-btn:active {
     transform: scale(0.95); /* Shrinks slightly when clicked */
   }
-
-
-/* Footer section */
-.footer {
+  
+  /* Cart header styles */
+  .cart-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 15px 0;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  .cart-header div {
+    text-align: center;
+  }
+  
+  .cart-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center; /* Ensure alignment of heading */
+  }
+  
+  /* Cart Container */
+  .cart-container {
+    width: 100%; /* Full width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add padding for spacing */
+    box-sizing: border-box; /* Include padding in width calculation */
+  }
+  
+  /* Cart Item Layout */
+  .cart-item {
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr 1fr 2fr; /* Define the grid columns */
+    gap: 20px;
+    border-bottom: 1px solid #ddd;
+    width: 100%; /* Ensure grid spans full container width */
+    align-items: center; /* Center align items vertically */
+  }
+  
+  .cart-img img {
+    width: 100%; /* Responsive image size */
+    max-width: 100px; /* Ensure image size doesn't exceed */
+    border-radius: 6px;
+    object-fit: cover;
+  }
+  
+  .cart-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    word-wrap: break-word; /* Handle long titles */
+    overflow: hidden; /* Prevent overflow */
+    text-overflow: ellipsis; /* Show ellipsis if the name overflows */
+  }
+  
+  .cart-price,
+  .cart-total {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    text-align: center;
+  }
+  
+  .cart-quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .quantity-btn {
+    padding: 6px 12px;
+    font-size: 16px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+  }
+  
+  .quantity-btn:hover {
+    background-color: #e8e8e8;
+    transform: scale(1.05);
+  }
+  
+  .cart-remove .remove-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+    background-color: #757575;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+  }
+  
+  .cart-remove .remove-btn:hover {
+    background-color: #e54e4e;
+    transform: scale(1.05);
+  }
+  
+  /* Header Styling */
+  .label {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .checkout,
+  .removeAll {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+  }
+  
+  .checkout {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .checkout:hover {
+    background-color: #43a047;
+    transform: translateY(-2px);
+  }
+  
+  .removeAll {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .removeAll:hover {
+    background-color: #d32f2f;
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .cart-container {
+      padding: 10px; /* Reduce padding on smaller screens */
+    }
+  
+    .cart-item {
+      grid-template-columns: 1fr 2fr 1fr 1fr; /* Simplified grid for smaller screens */
+      gap: 10px;
+    }
+  
+    .cart-price,
+    .cart-total,
+    .cart-quantity {
+      text-align: left;
+      font-size: 12px; /* Smaller font for mobile */
+    }
+  
+    .checkout,
+    .removeAll {
+      font-size: 14px; /* Smaller buttons for mobile */
+      padding: 8px 16px;
+    }
+  }
+  
+  
+  /**
+  * ! style rules for label and some buttons
+  **/
+  
+  .text-center {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .HomeBtn {
+    background-color: #212529;
+    color: white;
+    border: none;
+    padding: 6px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .bi-x-lg {
+    color: red;
+    font-weight: bold;
+  }
+  
+  /* Notification Styles */
+  .notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    opacity: 0;
+    visibility: hidden; /* Hide it initially */
+    transition: opacity 0.5s ease, visibility 0s 0.5s; /* Transition opacity and delay visibility change */
+    z-index: 9999;
+  }
+  
+  .notification.show {
+    visibility: visible; /* Make it visible */
+    opacity: 1; /* Make it fully opaque */
+    transition: opacity 0.5s ease; /* Fade in */
+  }
+  
+  /**
+  * ! style rules for shopping-cart
+  **/
+  
+  .shopping-cart {
+    display: grid;
+    justify-content:center;
+    gap: 15px;
+  }
+  
+  
+  .navbar-toggler{
+    text-align: left;
+  }
+  
+  
+  /* Home video carousell section */
+  .carousel {
+    position: relative;
+    width: 100%;
+    height: 700px; /* Adjust height as needed */
+    overflow: hidden;
+  }
+  
+  .carousel-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6); /* Subtle background to improve text readability */
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Softer shadow for depth */
+    animation: fadeIn 1s ease-in-out; /* Smooth fade-in animation */
+    max-width: 80%; /* Ensures responsiveness */
+  }
+  
+  .carousel-caption h1.brand-name {
+    font-size: 50px; /* Professional large title */
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-family: "Roboto", sans-serif; /* Clean modern font */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Subtle text shadow */
+  }
+  
+  .carousel-caption p.brand-description {
+    font-size: 20px; /* Subheading size */
+    font-weight: 400;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .carousel-caption .cta-button {
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: rgb(51, 51, 51); /* Bright and modern call-to-action color */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .carousel-caption .cta-button:hover {
+    background-color: #757575;
+    transform: scale(1.05); /* Slight scaling for hover effect */
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+  }
+  
+  
+  
+  
+  
+  /* Contact Header */
+  .contact-header {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+  
+  .contact-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image covers the area */
+  }
+  
+  .contact-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Darken the image with a semi-transparent black */
+    z-index: 1; /* Ensure overlay is below text */
+  }
+  
+  .contact-header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 2; /* Ensure text is above the darkened overlay */
+  }
+  
+  .contact-header-text h1 {
+    font-size: 3em;
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  
+  .contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  
+  /* Shop header/banner section*/
+  .shop-header {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Set height of carousel */
+    overflow: hidden;
+  }
+  
+  .carousell {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .carousell-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousell-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image is properly scaled */
+  }
+  
+  
+  .prev-button {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 30px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transform: translateY(-50%);
+    opacity: 0.6;
+  }
+  
+  .prev-button:hover {
+    opacity: 1;
+  }
+  
+  /* Styles for the next-button */
+  .next-button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 30px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transform: translateY(-50%);
+    opacity: 0.6;
+  }
+  
+  .next-button:hover {
+    opacity: 1;
+  }
+  
+  /* Add styles for shop header text */
+  .shop-header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 2rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+  }
+  
+  
+  /* ContactUs section */
+  .container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px; /* Adjust gap between columns */
+  }
+  
+  .contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .left-column,
+  .right-column {
+    flex: 1;
+    background-color: rgb(51, 51, 51);
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .left-column h2,
+  .right-column h2 {
+    color: white;
+    margin-bottom: 15px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .left-column p,
+  .right-column p {
+    color: white;
+    line-height: 1.6;
+  }
+  
+  .map iframe {
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .right-column form {
+    margin-top: 10px;
+  }
+  
+  .right-column label {
+    color:white;
+    font-weight: bold;
+  }
+  
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  input[type=submit] {
+    background-color: white;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: rgb(155, 148, 148);
+  }
+  
+  
+  /* Footer section */
+  .footer {
     background-color: rgb(51, 51, 51);
     padding: 20px 10px;
     color: #4f4f4f;
@@ -602,7 +1028,4 @@ body {
       padding: 10px 20px;
       font-size: 14px;
     }
-  }
-  
-
-
+  } 
