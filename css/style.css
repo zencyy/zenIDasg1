@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+.navbar{
+    display: flex;
+    justify-content: space-between; /* Ensure spacing between left and right content */
+    align-items: center;
+    background-color: rgb(51, 51, 51);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Add spacing between logo and navigation links */
+}
+
+
+.navbar .brand img {
+    width: 80px;
+    border-radius: 50%;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+}
+  
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+  
+.navbar ul li a:hover {
+    color: #4f4f4f;
+}
+  
+/* Cart Icon */
+.navbar .cart {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    position: relative;
+}
+  
+.navbar .cart .cartAmount {
+    background-color: #4f4f4f;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+}
